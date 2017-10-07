@@ -1,5 +1,5 @@
 import numpy as np
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn import datasets
 from sklearn.metrics import accuracy_score
 from scipy import stats
@@ -57,7 +57,7 @@ def Main():
     yTrain = iris_train_Y.tolist()
     predY = []
     for j in range(len(iris_test_X[:,1])):
-        predY.append(getKNN(iris_train_X,yTrain,iris_test_X[j,:],7))
+        predY.append(getKNN(iris_train_X,yTrain,iris_test_X[j,:],7)) ##K value is here!
     y_true = iris_test_Y
     y_pred = np.array(predY)
     

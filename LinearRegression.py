@@ -2,8 +2,9 @@ import numpy as np
 import warnings
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
-from sklearn import linear_model
+from sklearn.linear_model import LogisticRegression
 from sklearn import datasets
+from sklearn.svm import SVC
 
 np.set_printoptions(threshold = 5)
 
@@ -30,7 +31,7 @@ iris_dev_Y = np.array(ar_dev)
 iris_test_Y = np.array(ar_test)
 
 # Create linear regression object
-regr = linear_model.LinearRegression()
+regr = LogisticRegression()
 
 # Train the model using the training sets
 regr.fit(iris_train_X, iris_train_Y)
