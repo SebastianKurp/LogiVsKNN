@@ -12,13 +12,17 @@ iris = datasets.load_iris()
 iris_X = iris.data
 iris_Y = iris.target
 
+#Spilts data between train,test,dev
+#This one splits the data as train and test, 70-30
 ar_train, ar_test = train_test_split(iris_X, test_size=0.30, random_state=42)
+#This line spilts the test data previously split in the last part in half, so 15%.
 ar_dev, ar_test = train_test_split(ar_test,test_size=0.5, random_state=42)
 
 iris_train_X = np.array(ar_train)
 iris_dev_X = np.array(ar_dev)
 iris_test_X = np.array(ar_test)
 
+#spilts the iris_Y
 ar_train, ar_test = train_test_split(iris_Y, test_size=0.30, random_state=42)
 ar_dev, ar_test = train_test_split(ar_test,test_size=0.5, random_state=42)
 
@@ -28,10 +32,7 @@ iris_test_Y = np.array(ar_test)
 
 
 
-#this fx finds dinstance between points.
-#length is the size of the tuple
-
-
+#Uses euclideanDistance formula to find the distance between two points
 def euclideanDistance(instance1, instance2, length):
 	distance = 0
 	for x in range(length):

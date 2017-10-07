@@ -8,7 +8,7 @@ from sklearn.svm import SVC
 
 np.set_printoptions(threshold = 5)
 
-#Loads Iris dataset
+#Loads Iris dataset()
 iris = datasets.load_iris()
 iris_X = iris.data
 iris_Y = iris.target
@@ -23,6 +23,7 @@ iris_train_X = np.array(ar_train)
 iris_dev_X = np.array(ar_dev)
 iris_test_X = np.array(ar_test)
 
+#spilts the iris_Y
 ar_train, ar_test = train_test_split(iris_Y, test_size=0.30, random_state=42)
 ar_dev, ar_test = train_test_split(ar_test,test_size=0.5, random_state=32)
 
@@ -36,7 +37,7 @@ logreggie = LogisticRegression()
 # Train the model using the training sets
 logreggie.fit(iris_train_X, iris_train_Y)
 
-# The coefficients
+# Prints coefficients
 print('Coefficients: \n', logreggie.coef_)
 # The mean squared error
 print("Mean squared error: %.2f"
