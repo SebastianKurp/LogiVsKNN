@@ -37,9 +37,9 @@ logreggie = LogisticRegression()
 logreggie.fit(iris_train_X, iris_train_Y)
 
 # The coefficients
-print('Coefficients: \n', regr.coef_)
+print('Coefficients: \n', logreggie.coef_)
 # The mean squared error
 print("Mean squared error: %.2f"
-      % np.mean((regr.predict(iris_test_X) - iris_test_Y) ** 2))
-# Explained variance score: 1 is perfect prediction
-print('Variance score: %.2f' % regr.score(iris_test_X, iris_test_Y))
+    % np.mean((logreggie.predict(iris_test_X) - iris_test_Y) ** 2))
+#Variance score of 1 is perfect prediction
+print('Variance score: %.2f' % logreggie.score(iris_test_X, iris_test_Y))
