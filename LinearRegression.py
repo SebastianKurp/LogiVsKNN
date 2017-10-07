@@ -31,10 +31,10 @@ iris_dev_Y = np.array(ar_dev)
 iris_test_Y = np.array(ar_test)
 
 # Create linear regression object
-regr = LogisticRegression()
+logreggie = LogisticRegression()
 
 # Train the model using the training sets
-regr.fit(iris_train_X, iris_train_Y)
+logreggie.fit(iris_train_X, iris_train_Y)
 
 # The coefficients
 print('Coefficients: \n', regr.coef_)
