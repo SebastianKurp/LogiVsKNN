@@ -4,6 +4,7 @@ from sklearn import datasets
 from sklearn.metrics import accuracy_score
 from scipy import stats
 import math
+import warnings
 np.set_printoptions(threshold = 50)
 np.set_printoptions(precision=4)
 
@@ -22,7 +23,7 @@ iris_train_X = np.array(ar_train)
 iris_dev_X = np.array(ar_dev)
 iris_test_X = np.array(ar_test)
 
-#spilts the iris_Y
+#spilts the iris_Y, the same way as above.
 ar_train, ar_test = train_test_split(iris_Y, test_size=0.30, random_state=42)
 ar_dev, ar_test = train_test_split(ar_test,test_size=0.5, random_state=42)
 
