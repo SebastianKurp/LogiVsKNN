@@ -31,7 +31,7 @@ iris_train_Y = np.array(ar_train)
 iris_dev_Y = np.array(ar_dev)
 iris_test_Y = np.array(ar_test)
 
-# Create linear regression object
+# Create logistic regression object
 logreggie = LogisticRegression()
 
 # Train the model using the training sets
